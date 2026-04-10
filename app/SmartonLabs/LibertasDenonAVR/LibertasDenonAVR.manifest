@@ -1,0 +1,28 @@
+{
+    "codeVersion": "20250717.173928.549.5",
+    "developer": "SmartonLabs",
+    "docsVersion": "20250717.173954.311.9",
+    "documents": [
+        {
+            "locale": "en",
+            "version": "20250503.140402.459.5"
+        },
+        {
+            "locale": "zh_Hans",
+            "version": "20250717.173954.310.7"
+        }
+    ],
+    "file": "LibertasDenonAVR",
+    "generated": [
+        "lua",
+        "53.lua"
+    ],
+    "git": {
+        "folder": "/code/ts/SmartonLabs/LibertasDenonAVR",
+        "git": "https://github.com/LibertasIoT/libertas_apps.git",
+        "rev": "1c9a55829a5b44887180a9ba5b70ffde3df6a1d2"
+    },
+    "lang": "ts",
+    "signatureVersion": "20250717.173954.311.8",
+    "version": "20250717.173928.549.5"
+}
