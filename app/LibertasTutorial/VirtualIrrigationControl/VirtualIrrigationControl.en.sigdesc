@@ -1,0 +1,1 @@
+{"DisplayName":"VirtualIrrigationControl", "Description":"", "List":[{"Locale":"en", "Name":"VirtualIrrigationController", "DisplayName":"VirtualIrrigationController", "Description":"", "List":[{"Type":0, "Name":"valves", "Description":"", "Extras":[]},{"Type":1, "Name":"", "Description":"", "Extras":[]}], "Strings":{}}], "Types":[]}

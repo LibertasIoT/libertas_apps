@@ -1,0 +1,24 @@
+{
+    "codeVersion": "20251026.182722.338.27",
+    "developer": "LibertasTutorial",
+    "docsVersion": "20251026.182737.753.30",
+    "documents": [
+        {
+            "locale": "en",
+            "version": "20250929.171204.225.1"
+        }
+    ],
+    "file": "VirtualIrrigationControl",
+    "generated": [
+        "lua",
+        "53.lua"
+    ],
+    "git": {
+        "folder": "/code/ts/LibertasTutorial/VirtualIrrigationControl",
+        "git": "https://github.com/LibertasIoT/libertas_apps.git",
+        "rev": "df978986bd1cb42c00c4884705a38ddd0f3cf10a"
+    },
+    "lang": "ts",
+    "signatureVersion": "20251026.144016.979.2",
+    "version": "20251026.182722.338.27"
+}
