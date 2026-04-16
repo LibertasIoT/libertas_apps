@@ -1,21 +1,25 @@
 {
-    "codeVersion": "0.1.0.36",
+    "codeVersion": "0.1.0.37",
     "developer": "libertas",
-    "docsVersion": "20260416.25047.556.3",
+    "docsVersion": "20260416.30855.469.3",
     "documents": [
         {
             "locale": "en",
-            "version": "20260416.25047.554.1"
+            "version": "20260416.30855.466.1"
         }
     ],
-    "generated": [],
+    "generated": [
+        "aarch64-unknown-linux-gnu",
+        "arm-unknown-linux-gnueabihf",
+        "x86_64-unknown-linux-gnu"
+    ],
     "git": {
         "folder": "/code/rs/libertas/sprinkler",
         "git": "https://github.com/LibertasIoT/libertas_apps.git",
-        "rev": "1b106edae20f57cb2db662842d9a89a74611344f"
+        "rev": "b64b7cad38f40935667fec8fb355e34b6977536b"
     },
     "lang": "rs",
     "package": "sprinkler",
-    "signatureVersion": "20260416.24928.182.0",
-    "version": "20260416.24928.182.0"
+    "signatureVersion": "20260416.30823.104.0",
+    "version": "20260416.30823.104.0"
 }
