@@ -5,14 +5,13 @@ use alloc::vec::Vec;
 use alloc::rc::Rc;
 use core::cell::RefCell;
 use libertas::*;
-use libertas_notification::*;
 //use libertas_matter::*;
 use libertas_macros::*;
 
 #[derive(Clone, LibertasAvroDecode, LibertasAvroEncode)]
 pub struct TimeSlot {
     pub start_time: LibertasDateTime,
-    pub duration: LibertasTimeOnly,
+    pub duration: u32,
 }
 
 #[derive(Clone, LibertasAvroDecode, LibertasAvroEncode)]
@@ -60,25 +59,6 @@ pub struct SprinklerZone {
     #[agent_tool_schema(ZoneDataProtocol)]
     #[agent_tool_server]
     pub zone_info: LibertasAgentTool,
-}
-
-struct ZoneData {
-    zone: SprinklerZone,
-    next_schedule: TimeSlot,
-    hold_off_periods: Vec<TimeSlot>,
-    notification_list: Vec<LibertasUser>
-}
-
-fn send_data(zone_data: &ZoneData, trans_id: Option<LibertasTransId>, peer: u32) {
-    let info = ZoneDataProtocol::ZoneInfo(SprinklerZoneInfo {
-        next_schedule: zone_data.next_schedule.clone(),
-        hold_off_periods: zone_data.hold_off_periods.clone(),
-    });
-    if let Some(trans_id) = trans_id {
-        libertas_agent_tool_response(zone_data.zone.zone_info, &info, trans_id, peer);
-    } else {
-        libertas_agent_tool_report(zone_data.zone.zone_info, &info, Some(peer));
-    }
 }
 
 pub fn libertas_sprinkler (
@@ -168,3 +148,21 @@ pub fn libertas_sprinkler (
     }
 }
 
+struct ZoneData {
+    zone: SprinklerZone,
+    next_schedule: TimeSlot,
+    hold_off_periods: Vec<TimeSlot>,
+    notification_list: Vec<LibertasUser>
+}
+
+fn send_data(zone_data: &ZoneData, trans_id: Option<LibertasTransId>, peer: u32) {
+    let info = ZoneDataProtocol::ZoneInfo(SprinklerZoneInfo {
+        next_schedule: zone_data.next_schedule.clone(),
+        hold_off_periods: zone_data.hold_off_periods.clone(),
+    });
+    if let Some(trans_id) = trans_id {
+        libertas_agent_tool_response(zone_data.zone.zone_info, &info, trans_id, peer);
+    } else {
+        libertas_agent_tool_report(zone_data.zone.zone_info, &info, Some(peer));
+    }
+}

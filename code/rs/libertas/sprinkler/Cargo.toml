@@ -7,7 +7,6 @@ edition = "2024"
 libertas-matter = { git="https://github.com/LibertasIoT/libertas-matter.git", default-features = false, features = ["alloc"] }
 libertas = { git = "https://github.com/LibertasIoT/libertas-rs.git", package="libertas" }
 libertas_macros = { git = "https://github.com/LibertasIoT/libertas-rs.git", package="libertas_macros" }
-libertas-notification = { git = "https://github.com/LibertasIoT/libertas-rs.git", package="libertas-notification" }
 
 [lib]
 crate-type = ["rlib"]
